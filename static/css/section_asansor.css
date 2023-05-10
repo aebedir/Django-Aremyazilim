@@ -1,0 +1,59 @@
+
+/* asansor sayfası */
+#asansor{
+    position: relative;
+}
+#asansor h1{
+    font-size: 25px;   
+}
+#asansor img{
+    text-align: center;
+}
+.asansor_price{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    z-index: 500;
+}
+
+
+/* website sayfası */
+#website{
+    position: relative;
+}
+#website h1{
+    font-size: 25px;   
+}
+#website img{
+    height: auto;
+    width: 100%;
+}
+.website_price{
+    position: absolute;
+    top:8%;
+    left: 2%;
+    z-index: 500;
+}
+
+.kurumsal-mail{
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    z-index: 500;
+}
+.card{
+    border: none;
+}
+.card-body{
+    padding-right: 0;
+}
+
+
+/* seo sayfası */
+#seo h1{
+    font-size: 25px;
+}
+#seo img{
+    width: 100%;
+    height: auto;
+}

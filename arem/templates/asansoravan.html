@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Asansör Avan Projesi</title>
+{% endblock title %}
+
+{% block content %}
+<section id="asansor" class="container mt-5"> 
+    <div class="text-center">
+        <h1 class="btn btn-secondary">Asansör Proje Hizmetleri</h1>
+    </div> 
+    
+    <div class="asansor_price">
+        <h5 class="btn btn-danger"><a href="tel:05315400826" class="text-decoration-none text-white">1000 TL'den Başlayan Fiyatlarla...</a></h5>
+    </div>
+         
+    <div class="card mb-3">
+        <div class="row g-0">              
+          <div class="col-md-8 order-1">
+            <div class="card-body">
+              <h5 class="card-title">Asansör Proje Hizmetleri</h5>
+              <p class="card-text"><b>Gebze, Darıca ve Çayırova Bölgelerinde Aynı Gün Teslim Asansör Avan Projeleri Hizmeti Vermekteyiz.</b></p>
+              <div>
+                <ul>
+                    <li>
+                        <p>Gebze belediyesi projeleri gebze belediyesinin yapmış olduğu e-belediye sisteminden yüklenmektedir.</p>
+                        <p>Teslim Edilmesi Gereken Evraklar (Mail Yoluyla)</p>
+                        <ul>
+                            <li>Onaylı Mimari Proje</li>
+                            <li>Proje Kontrol Formu (Yapı Denetim Firmalarından Temin Edilecek)</li>
+                            <li>Yapı Denetim Denetçi T.C Kimlik Numaraları (Elektrik ve Mekanik)</li>
+                            <li>Müteahhit ve Mal Sahibi İsim Soyisim ve Telefon Numaraları</li>
+                        </ul>
+                    </li>
+                  </ul>
+              </div>                  
+              <hr>
+              <div>
+                <ul>
+                    <li>
+                        <p>Çayırova belediyesi projeleri öncelikle avan proje dosyası hazırlanarak belediyeye teslim edilir. Daha sonra mail yoluyla proje onaylatıldıktan sonra ozalit çıktısı alınarak mimara teslim edilir.</p>
+                        <p>Teslim Edilmesi Gereken Evraklar (Mail Yoluyla)</p>
+                        <ul>
+                            <li>Onaylı Mimari Proje</li>
+                            <li>Asansör Avan Projesi Hizmet Sözleşmesi (Bizim Tarafımızdan Hazırlanacak)</li>                            
+                        </ul>
+                    </li>
+                  </ul>
+              </div>
+              <hr>
+              <div>
+                <ul>
+                    <li>
+                        <p>Darıca belediyesi projeleri çizildikten sonra ozalit çıktısı alınarak belediyenin istemiş olduğu evraklar ile birlikte mimara teslim edilir.</p>
+                        <p>Teslim Edilmesi Gereken Evraklar (Mail Yoluyla)</p>
+                        <ul>
+                            <li>Onaylı Mimari Proje</li>                                                            
+                        </ul>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 order-2">
+            <img src="{% static 'img/project.jpg' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+      </div>
+</section>
+{% endblock content %}

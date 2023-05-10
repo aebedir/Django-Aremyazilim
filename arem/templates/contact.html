@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Arem Yazılım/Bize Ulaşın</title>
+{% endblock title %}
+
+{% block nav %}
+<li class="nav-item">
+    <a class="nav-link" id="1" aria-current="page" onClick="add(this.id)" href="{% url 'anasayfa' %}">Anasayfa</a>
+    </li>
+    <li class="nav-item">
+    <p class="nav-link" style="cursor: pointer;" id="2" href="{% url 'anasayfa' %}#body" onClick="add(this.id)">Hizmetlerimiz</p>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" id="3" href="#" onClick="add(this.id)">Hakkımızda</a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link active"  id="4"  href="{% url 'contact' %}" onClick="add(this.id)" >Bize Ulaşın</a>
+    </li> 
+{% endblock nav %}
+
+{% block content %}
+<div class="uyari d-none">
+    <h5 class="alert alert-success">Form Başarıyla Gönderildi.</h5>
+</div>
+
+ <section class="formInfo ">
+    <form name="form"  action="https://formspree.io/f/mgebddqo"
+    method="POST"> 
+                   
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Adınız : </span>
+            <input type="text" class="form-control" placeholder="Adınızı giriniz..." aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Soyadınız : </span>
+            <input type="text" class="form-control" placeholder="Soyadınızı giriniz... " aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+          
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Mail Adresiniz : </span>
+            <input type="email" class="form-control" placeholder="Mail adresinizi giriniz..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text email" id="basic-addon2">@example.com</span>
+        </div>
+
+        <div class="input-group mb-3">
+            <span  class="input-group-text" id="basic-addon1">Almak İstediğiniz Hizmet : </span>
+            <select name="hizmet" class="form-select" id="inputGroupSelect01">
+            <option selected>Seçiniz...</option>
+            <option value="1">Asansör Avan Projesi</option>
+            <option value="2">Kurumsal Web Site Hizmeti</option>
+            <option value="3">S.E.O Hizmeti</option>                
+            </select> 
+        </div>
+        <div class="input-group mb-3 asansorr d-none" >
+            <span class="input-group-text" id="basic-addon2">Asansör Avan Belediye Seçimi :</span>
+            <select class="form-select" id="inputGroupSelect02">
+            <option selected>Seçiniz...</option>
+            <option value="1">Gebze</option>
+            <option value="2">Darıca</option>
+            <option value="2">Çayırova</option>
+            <option value="2">Diğer</option>
+            </select>
+        </div> 
+
+        <div class="pt-2 button formgonder">
+            <button class="btn btn-danger" type="submit">Formu Gönder</button>
+        </div>
+    </form>
+</section>
+{% endblock content %}

@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section_egitim.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section_form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section_asansor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
+
+    {% block title %}{% endblock title %}
+ 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HWQGTYLBV">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4HWQGTYLBV');
+    </script>
+</head>
+<body id="body">
+    
+    <!-- Navigasyon barı -->
+    <header>
+        <div class="secret_navbar d-none ">
+            <ul class="navbar2">
+                <li class="nav-item2">
+                    <a class="nav-link2 " href="{% url 'anasayfa' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                </li>
+                <li class="nav-item2">
+                <a class="nav-link2" id="5" onClick="add2(this.id)" href="{% url 'anasayfa' %}">Anasayfa</a>
+                </li>
+                <li class="nav-item2">
+                <a class="nav-link2" id="6" onClick="add2(this.id)" href="{% url 'anasayfa' %}#body">Hizmetlerimiz</a>
+                </li>
+                <li class="nav-item2">
+                <a class="nav-link2" id="7" onClick="add2(this.id)">Hakkımızda</a>
+                </li>                            
+                <li class="nav-item2">
+                    <a class="nav-link2" id="8" onClick="add2(this.id)" href="{% url 'contact' %}">Bize Ulaşın</a>
+                </li>                         
+            </ul>
+        </div>
+        <div class="header-top">
+            <div class="container d-flex align-items-center justify-content-end">            
+                <div class="phone-mail">
+                    <a href="tel:05315400826" class="pe-3"><i class="fa-solid fa-phone pe-2"></i>+90 531 540 0826</a>
+                    <a href="mailto:info@aremyazilim.com"><i class="fa-solid fa-at pe-2"></i>info@aremyazilim.com</a>
+                </div>
+                <div class="social-links">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container p-2">
+                    <a class="navbar-brand text-white ps-md-5" href="{% url 'anasayfa' %}">Arem Yazılım</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" href="{% url 'anasayfa' %}">Arem Yazılım</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-lg-auto">
+                            {% block nav %}
+                            <li class="nav-item">
+                            <a class="nav-link active" id="1" aria-current="page" onClick="add(this.id)" href="{% url 'anasayfa' %}">Anasayfa</a>
+                            </li>
+                            <li class="nav-item">
+                            <p class="nav-link" style="cursor: pointer;" id="2" href="#" onClick="add(this.id)">Hizmetlerimiz</p>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="3" href="#" onClick="add(this.id)">Hakkımızda</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link"  id="4"  href="{% url 'contact' %}" onClick="add(this.id)" >Bize Ulaşın</a>
+                            </li> 
+                            {% endblock nav %}                            
+                                                        
+                            <div class="phone-mail d-none">
+                                <hr>
+                                <a href="tel:05315400826" class="pe-3"><i class="fa-solid fa-phone pe-2"></i>+90 531 540 0826</a>
+                                <hr>
+                                <a href="mailto:info@aremyazilim.com"><i class="fa-solid fa-at pe-2"></i>info@aremyazilim.com</a>
+                            </div>         
+                        </ul>                             
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+    </header>
+
+    <!-- Eğitimlerimiz açılır kapanır sekme -->
+    <section class="d-flex align-items-start justify-content-evenly d-none" id="egitim">        
+        <div class="asansor">
+            <h4><a href="{% url 'asansoravan' %}" class="btn btn-primary">Asansör Avan Proje Çizimleri</a></h4>
+            <p>Gebze, Darıca, Çayırova Belediyeleri Başta Olmak Üzere Asansör Avan Proje Çizim Hizmetleri</p>
+            <ul>
+                <li>Hızlı ve Başarılı Proje Tasarımları</li>
+                <li>İlgili Belediyeye Uygun Projeler</li>
+                <li>Proje Onay Takibi</li>
+                
+            </ul>
+        </div>
+        <div class="webtasarım">
+            <h4><a href="#website" class="btn btn-primary">Kurumsal Web Sitesi Çözümleri</a></h4>
+            <p>Anahtar Teslim Kurumsal Web Siteniz İle Şirketinizi Daha Çok Müşteriye Ulaştırın.</p>
+            <ul>
+                <li>Yüz Yüze veya Online Olarak Yapacağımız Görüşmeler ile Web Sitesi Genel Planını Belirliyoruz.</li>
+                <li>Sizden Almış Olduğumuz Bilgiler Doğrultusunda Web Sitenizin Çalışmalarına Başlıyoruz.</li>
+                <li>Web Sitemiz Sizlere Sunuma ve Yayına Hazırdır.</li>
+            </ul>
+        </div>
+        <div class="seo">
+            <h4><a href="#seo" class="btn btn-primary">S.E.O Hizmeti</a></h4>
+            <p>Arama Motoru Optimizasyonu İle Web Sitenizi Herzaman Üst Sıralarda Tutun. Doğru Adımları Atarak Sitenizi Arama Motorlorunda Üst Sıralara Taşımayı Hedefliyoruz.</p>
+        </div>
+    </section>    
+
+    <!-- Yukarı Çık Butonu -->  
+    <button class="up border-0 fs-1 d-none"><i class="fa-solid fa-circle-arrow-up fa-bounce"></i></button>
+
+    {% block content %}{% endblock content %}   
+
+
+    <footer class="footer mt-5 bg-dark">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                
+                <div class="col-md-8 d-flex align-items-center justify-content-evenly">
+                    <div>
+                        <a href="{% url 'anasayfa' %}">Arem Yazılım</a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="{% url 'anasayfa' %}">Anasayfa</a></li>
+                            <li><a href="{% url 'anasayfa' %}#body">Hizmetlerimiz</a></li>
+                            <li><a href="">Hakkımızda</a></li>
+                            <li><a href="{% url 'asansoravan' %}">Asansör Avan Projesi</a></li>
+                            <li><a href="{% url 'contact' %}">Bize Ulaşın</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 text-center">
+                    <ul>
+                        <li><a href="tel:05315400826" class="pe-3"><i class="fa-solid fa-phone pe-2"></i>+90 531 540 0826</a></li>
+                        <li><a href="mailto:info@aremyazilim.com"><i class="fa-solid fa-at pe-2"></i>info@aremyazilim.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="text-center p-2 footer-bottom">
+        <a class="m-0 text-white text-decoration-none" href="" >@2022 Arem Yazılım. Tüm Hakları Saklıdır.</a>
+    </div>
+    
+
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+    /* paste this line in verbatim */
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    /* customize formbutton below*/     
+    formbutton("create", {
+        action: "https://formspree.io/f/mgebddqo",
+        title: "Size Nasıl Yardımcı Olabilirim ?",
+        fields: [
+        { 
+            type: "email", 
+            label: "E-mail:", 
+            name: "email",
+            required: true,
+            placeholder: "abc@email.com"
+        },
+        {
+            type: "textarea",
+            label: "Mesaj:",
+            name: "message",
+            placeholder: "Mesajınızı Yazınız",
+        },
+        { type: "submit" }      
+        ],
+        styles: {
+        title: {
+            backgroundColor: "red"
+        },
+        button: {
+            backgroundColor: "red"
+        }
+        }
+    });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>    
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/app.js' %}"></script> 
+</body>
+</html>

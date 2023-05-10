@@ -1,0 +1,19 @@
+.formInfo{
+    width: 60%;
+    border-radius: 15px;
+    background-color: grey;
+    padding: 15px; 
+    margin: auto; 
+    margin-top: 100px;  
+}
+.button button{
+    margin: auto;
+    width: 100%;
+}
+
+.uyari{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}

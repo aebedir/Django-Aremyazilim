@@ -1,0 +1,165 @@
+@media screen and (max-width:1023px) {
+    .animation_text  h2{
+        font-size: 20px;    
+    }
+    #egitim{
+        font-size: 16px;
+        padding: 0 75px;
+        top: 21%;
+    }
+    .formInfo{        
+        top: 25%;
+    }
+    .offcanvas-body ,.offcanvas-header{
+        background-image: linear-gradient(to right, black, #414b59) ;
+    }
+    .offcanvas-title{
+        color: white;
+    }    
+    .offcanvas-body .phone-mail a{
+        color: white;        
+    }
+    .phone-mail a:nth-child(2){
+        border: none;
+    }
+    .website_price{        
+        top: 5% ;
+        left: 2%;        
+    }    
+    .kurumsal-mail{        
+        top: 8%;
+        left: 2%;       
+    }    
+    .asansor_price{        
+        top: 7%;
+        right: 2%;        
+    }
+    .asansor_price a{
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .logo{
+        display: none;
+    }   
+    .animation_text{         
+        width: 90%;           
+        margin: auto;
+    } 
+    .formInfo{
+        width: 70%;
+    }
+    .email{
+        display: none;
+    }
+    .offcanvas-body ,.offcanvas-header{
+        background-image: linear-gradient(to right, black, #414b59) ;
+    }
+    .offcanvas-title{
+        color: white;
+    }
+    .offcanvas-body .phone-mail{
+        display: block !important;
+    }
+    .offcanvas-body .phone-mail a{
+        color: white;        
+    }
+    .phone-mail a:nth-child(2){
+        border: none;
+    }
+    .animation_btn h5{
+        font-size: 16px;
+    } 
+    .website_price{        
+        top: 4% ;
+        left: 3%;        
+    }    
+    .kurumsal-mail{        
+        top: 6%;
+        left: 3%;       
+    }
+    #asansor .col-md-8{
+        order: 3 !important;
+    }
+    .asansor_price{        
+        top: 4%;
+        left: 3%;        
+    }  
+    .secret_navbar{
+        display: none !important;
+    }
+   
+}
+
+@media screen and (max-width:426px) {
+    #egitim{
+        display: none !important;
+    }  
+    .owl{
+        display: none;
+    }  
+    .offcanvas-body .phone-mail a{
+        font-size: 14px;        
+    }
+    .header-top .container{
+        display: inline !important;
+        padding: 0px;
+    }
+    .header-top .container a{
+        font-size: 14px;
+    }
+    .header-top .phone-mail , .social-links{
+        text-align: center;
+    }
+    .formInfo{
+        width: 80%;        
+    }
+    .formInfo span{
+        font-size: 14px;
+        padding: 0px 5px;
+    }
+    .formInfo input ,.formInfo select{
+        font-size: 14px;
+        padding: 3px 7px;
+    }
+    .animation_text{         
+        width: 100%;         
+    }
+    .animation_text h2{
+        font-size: 18px;
+    }
+    .animation_btn{          
+        width: 70%;
+    }
+    .getInfo{
+        padding: 7px 13px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .uyari{        
+        top: 24%;        
+    }
+    .website_price{        
+        top: 5% ;
+        left: 5%;        
+    }    
+    .kurumsal-mail{        
+        top: 7%;
+        left: 5%;       
+    }
+    #asansor .col-md-8{
+        order: 3 !important;
+    }
+    .asansor_price{        
+        top: 5%;
+        left: 5%;        
+    }
+    .card-body{
+        padding-right: 5px;
+    }
+    .up{
+        font-size: 40px !important;
+    }
+}
